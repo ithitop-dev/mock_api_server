@@ -8,9 +8,9 @@ npm run start-api
 http://localhost:3000
 
 Ex =>  
-       http://localhost:3000/restaurants
+       http://localhost:3000/restaurants \
        http://localhost:3000/search
 
 # ref
-https://github.com/marak/Faker.js
+https://github.com/marak/Faker.js \
 https://github.com/typicode/json-server
