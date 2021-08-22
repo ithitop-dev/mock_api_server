@@ -15,7 +15,7 @@ const txtGroups = {
 
  // body schema
  const bodySchemaPlace = {    
-   title: '{{company.companyName}} {{company.companySuffix}}',
+  name: '{{company.companyName}} {{company.companySuffix}}',
    group: groups.Place,
    txtGroup: txtGroups.Place,
    address: '{{address.streetAddress}}',
@@ -26,7 +26,7 @@ const txtGroups = {
  }
 
  const bodySchemaShop = {    
-    title: '{{company.companyName}} {{company.companySuffix}}',
+  name: '{{company.companyName}} {{company.companySuffix}}',
     group: groups.Shop,
     txtGroup: txtGroups.Shop,
     address: '{{address.streetAddress}}',
@@ -37,7 +37,7 @@ const txtGroups = {
   }
 
   const bodySchemaRestaurant = {    
-    title: '{{company.companyName}} {{company.companySuffix}}',
+    name: '{{company.companyName}} {{company.companySuffix}}',
     group: groups.Restaurant,
     txtGroup: txtGroups.Restaurant,
     address: '{{address.streetAddress}}',
@@ -50,8 +50,8 @@ const txtGroups = {
 const dataPlace = helper.generator(bodySchemaPlace,10)
 const dataShop = helper.generator(bodySchemaShop,10)
 const dataRestaurant = helper.generator(bodySchemaRestaurant,10)
-
-const data = [...dataPlace,...dataShop,...dataRestaurant]
+const arrData =  [...dataPlace,...dataShop,...dataRestaurant]
+const data = {itemTotal:arrData.length,items:arrData}
 
 module.exports = {
    data
